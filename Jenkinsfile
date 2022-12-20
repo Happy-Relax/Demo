@@ -2,23 +2,17 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Build & Test') {
             steps {
                 echo 'Building..'
-                sh 'java --version'
                 sh './gradlew clean build'
-            }
-        }
-
-        stage('Test') {
-            steps {
-                echo 'Testing..'
             }
         }
 
         stage('Deploy') {
             steps {
                 echo 'Deploying..'
+                sh './gradlew bootRun --args="--server.port=8888"'
             }
         }
 
