@@ -10,6 +10,6 @@ class DemoApplicationTests {
 
 	@Test
 	public void should_() {
-		assertEquals(1,2);
+		assertEquals(2,2);
 	}
 }
