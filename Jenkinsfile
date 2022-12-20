@@ -12,7 +12,6 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying..'
-                sh './gradlew bootRun --args="--server.port=8888"'
             }
         }
 
