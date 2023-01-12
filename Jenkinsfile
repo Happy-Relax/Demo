@@ -16,5 +16,11 @@ pipeline {
             }
         }
 
+        stage('Publish') {
+            steps {
+                echo 'Publish..'
+            }
+        }
+
     }
 }
